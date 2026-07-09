@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | WDD 231 Student Portfolio</title>
+  <meta name="description" content="Home page for my WDD 231 course portfolio, featuring an about-me profile and a dynamic list of my Web and Computer Programming certificate courses.">
+  <meta name="author" content="Your Name">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Literata:ital,opsz,wght@0,18..144,400;0,18..144,600;1,18..144,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <img src="images/logo.svg" alt="Site logo">
+      <span>Kezia Aparri</span>
+    </div>
+    <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+      <span class="bars"><span></span><span></span><span></span></span>
+    </button>
+  </header>
+
+  <nav id="primaryNav">
+    <ul>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="chamber/index.html">Chamber</a></li>
+      <li><a href="final/index.html">Final</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+
+    <div class="top-grid">
+      <section class="about">
+        <h2>About Me</h2>
+        <div class="section-body">
+          <p>
+            My name is Kezia Aparri, and I am a student with a strong interest in technology and science. I recently graduated from high school and am continuing my education through online learning. I enjoy studying software development because it allows me to develop problem-solving and programming skills.
+            In addition to technology, I am interested in chemistry and biochemistry and hope to combine my knowledge of science and technology in the future. My long-term goal is to build a successful career and eventually start a business in the pharmaceutical industry.
+            I am a hardworking and determined learner who values education, personal growth, and service. I enjoy taking on new challenges, learning new skills, and finding ways to improve myself both academically and personally.
+          </p>
+        </div>
+      </section>
+
+      <section class="photo">
+        <h2>Student Photo</h2>
+        <div class="photo-frame">
+          <img src="images/profile.jpg" alt="Kezia Aparri" width="300" height="300">
+        </div>
+      </section>
+    </div>
+
+    <section class="courses">
+      <h2>Web Certificate Courses</h2>
+
+      <div class="filters">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="CSE" aria-pressed="false">CSE</button>
+        <button type="button" data-filter="WDD" aria-pressed="false">WDD</button>
+      </div>
+
+      <div class="course-list" id="courseList" aria-live="polite">
+
+      </div>
+
+      <p class="credit-total" id="creditTotal"></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="socials">
+      <a href="https://github.com/kezzzzzqwqw" target="_blank" rel="noopener" aria-label="GitHub profile">
+        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/kezia-aparri/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 1.15C0 .52.52 0 1.15 0h13.7C15.48 0 16 .52 16 1.15v13.7c0 .63-.52 1.15-1.15 1.15H1.15C.52 16 0 15.48 0 14.85V1.15Zm4.94 12.32V6.16H2.55v7.31h2.4Zm-1.2-8.31c.83 0 1.35-.55 1.35-1.24-.02-.7-.52-1.24-1.33-1.24-.82 0-1.35.54-1.35 1.24 0 .69.51 1.24 1.32 1.24h.01ZM7.55 13.47V9.4c0-.22.02-.43.08-.59.18-.43.58-.88 1.25-.88.88 0 1.24.67 1.24 1.65v4.9h2.4V9.29c0-2.22-1.19-3.25-2.77-3.25-1.28 0-1.84.71-2.16 1.2v.03H7.6l.02-.03V6.16h-2.4c.03.68 0 7.31 0 7.31h2.4Z"/></svg>
+      </a>
+      <a href="https://x.com" target="_blank" rel="noopener" aria-label="X profile">
+        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M9.53 6.78 15.15 0h-1.33l-4.88 5.88L4.98 0H.15l5.9 8.53L.15 16h1.33l5.16-6.22L10.85 16h4.83L9.53 6.78ZM7.68 8.98l-.6-.86L2.4.98h2.04l3.83 5.48.6.86 4.98 7.13H11.8L7.68 8.98Z"/></svg>
+      </a>
+    </div>
+
+    <p class="copyright">
+      &copy; <span id="year"></span> Kezia Aparri, Philippines
+    </p>
+
+    <p class="last-mod fine-print">
+      Last Modification: <span id="lastModified"></span>
+    </p>
+  </footer>
+
+</body>
+</html>

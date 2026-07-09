@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300" role="img" aria-labelledby="avatarTitle">
+  <title id="avatarTitle">Placeholder student photo — replace with your own image</title>
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0 L0 0 0 20" fill="none" stroke="#3D5A80" stroke-width="0.5" opacity="0.35"/>
+    </pattern>
+  </defs>
+  <rect width="300" height="300" fill="#EDEAE0"/>
+  <rect width="300" height="300" fill="url(#grid)"/>
+  <circle cx="150" cy="118" r="52" fill="#3D5A80" opacity="0.85"/>
+  <path d="M60 268 C60 196 100 166 150 166 C200 166 240 196 240 268 Z" fill="#3D5A80" opacity="0.85"/>
+  <rect x="0" y="0" width="300" height="300" fill="none" stroke="#E8871E" stroke-width="4" stroke-dasharray="10 6"/>
+</svg>
