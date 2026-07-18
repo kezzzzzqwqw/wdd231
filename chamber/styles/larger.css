@@ -1,0 +1,113 @@
+/* =========================================
+   Davao Chamber of Commerce — larger.css
+   Styles for wider viewports (768px and up)
+   ========================================= */
+
+@media screen and (min-width: 768px) {
+
+  .site-header {
+    padding: 1rem 2rem;
+  }
+
+  .brand-name {
+    font-size: 1.2rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-nav {
+    display: block;
+    order: 2;
+    width: auto;
+  }
+
+  .main-nav ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.75rem;
+    margin-top: 0;
+    border-top: none;
+  }
+
+  .main-nav a {
+    padding: 0.3rem 0;
+    font-size: 0.95rem;
+    border-bottom: none;
+    position: relative;
+  }
+
+  .main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    height: 2px;
+    background-color: var(--color-secondary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+  }
+
+  .main-nav a:hover::after,
+  .main-nav a.current::after {
+    transform: scaleX(1);
+  }
+
+  .directory-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.25rem 2rem 1rem;
+  }
+
+  .directory-header h1 {
+    margin-bottom: 0;
+    font-size: 2.1rem;
+  }
+
+  .directory {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 0.5rem 2rem 2.5rem;
+  }
+
+  .member-card-body img {
+    width: 96px;
+    height: 96px;
+  }
+
+  .site-footer {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    padding: 2.25rem 2rem;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .directory {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .directory.list-view {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+
+  .directory {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .directory.list-view {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,329 @@
+/* =========================================
+   Davao Chamber of Commerce — base.css
+   Mobile-first base styles (320px and up)
+   ========================================= */
+
+/* ---------- Design tokens ---------- */
+:root {
+  --color-primary: #2E7D32;
+  --color-primary-dark: #245F28;
+  --color-secondary: #F9A825;
+  --color-bg: #FAF7F0;
+  --color-text: #2B2B2B;
+  --color-accent: #8D5524;
+  --color-card-bg: #FFFFFF;
+
+  --color-badge-member: #6D6D6D;
+  --color-badge-silver: #8D5524;
+  --color-badge-gold: #F9A825;
+
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Lora", serif;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 10px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 2px 6px rgba(0, 0, 0, 0.10), 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+/* ---------- Reset (defensive — works even if normalize.css fails to load) ---------- */
+* { box-sizing: border-box; }
+
+ul { list-style: none; margin: 0; padding: 0; }
+
+a { text-decoration: none; color: inherit; }
+
+button { font: inherit; cursor: pointer; border: none; background: none; }
+
+/* ---------- Base ---------- */
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  line-height: 1.25;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-primary);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  color: #fff;
+}
+
+/* Hamburger menu button */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 28px;
+  height: 28px;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+/* Mobile nav (hidden until toggled open) */
+.main-nav {
+  display: none;
+  order: 3;
+  width: 100%;
+}
+
+.main-nav.open {
+  display: block;
+}
+
+.main-nav ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.main-nav a {
+  display: block;
+  padding: 0.8rem 0.25rem;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: color 0.15s ease;
+}
+
+.main-nav a:hover {
+  color: #fff;
+}
+
+.main-nav a.current {
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+/* ---------- Directory page header ---------- */
+.directory-header {
+  padding: 1.5rem 1rem 0.75rem;
+}
+
+.directory-header h1 {
+  margin-bottom: 0.85rem;
+  font-size: 1.6rem;
+}
+
+.view-toggle {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.view-btn {
+  padding: 0.45rem 1.1rem;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  background-color: var(--color-card-bg);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.view-btn:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.view-btn.active {
+  color: #fff;
+  background-color: var(--color-primary);
+}
+
+/* ---------- Directory grid + cards ---------- */
+.directory {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  padding: 0.5rem 1rem 1.5rem;
+}
+
+.loading-message {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-card-bg);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.member-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.list-view .member-card {
+  flex-direction: row;
+  align-items: center;
+}
+
+.member-card-header {
+  padding: 0.7rem 0.9rem;
+  color: #fff;
+  background-color: var(--color-primary);
+}
+
+.list-view .member-card-header {
+  flex: 0 0 40%;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.member-card-header h2 {
+  margin-bottom: 0.2rem;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.member-tagline {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.member-card-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.85rem 0.9rem;
+}
+
+.member-card-body img {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.member-details p {
+  margin-bottom: 0.25rem;
+  font-size: 0.8rem;
+}
+
+.member-details strong {
+  color: var(--color-accent);
+}
+
+.member-details a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Membership badges */
+.badge {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 0.7rem;
+  color: #fff;
+}
+
+.badge-1 { background-color: var(--color-badge-member); }
+.badge-2 { background-color: var(--color-badge-silver); }
+.badge-3 { background-color: var(--color-badge-gold); color: var(--color-text); }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2rem;
+  padding: 1.75rem 1rem;
+  color: #fff;
+  background-color: var(--color-accent);
+}
+
+.site-footer > div {
+  flex: 1 1 220px;
+}
+
+.site-footer p {
+  margin-bottom: 0.2rem;
+  font-size: 0.85rem;
+}
+
+.footer-social {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.85rem;
+}
+
+.footer-social img {
+  width: 26px;
+  height: 26px;
+  opacity: 0.9;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.footer-social a:hover img {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.footer-meta {
+  text-align: right;
+}
+
+.footer-meta p {
+  font-size: 0.75rem;
+  opacity: 0.85;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Directory | Davao Chamber of Commerce</title>
+  <meta name="description" content="Browse tourism and agriculture businesses that belong to the Davao Chamber of Commerce.">
+  <meta name="author" content="Kezia Aparri">
+
+  <!-- Facebook / Open Graph -->
+  <meta property="og:title" content="Business Directory | Davao Chamber of Commerce">
+  <meta property="og:description" content="Browse tourism and agriculture businesses that belong to the Davao Chamber of Commerce.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://yourusername.github.io/wdd231/chamber/directory.html">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <script src="scripts/directory.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/logo.png" alt="Davao Chamber of Commerce logo" class="logo">
+      <span class="brand-name">Davao Chamber<br>of Commerce</span>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html" class="current" aria-current="page">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="directory-header">
+      <h1>Business Directory</h1>
+      <div class="view-toggle" role="group" aria-label="Choose directory view">
+        <button id="gridBtn" class="view-btn active" aria-pressed="true">Grid</button>
+        <button id="listBtn" class="view-btn" aria-pressed="false">List</button>
+      </div>
+    </section>
+
+    <section id="directory" class="directory grid-view">
+      <!-- Member cards injected here by JavaScript -->
+      <p class="loading-message">Loading member businesses…</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-contact">
+      <p><strong>Davao Chamber of Commerce</strong></p>
+      <p>Davao City, Davao del Sur, Philippines 8000</p>
+      <p>info@davaochamber.ph</p>
+      <p>(082) 222-1000</p>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://youtube.com" aria-label="YouTube"><img src="images/youtube.svg" alt="YouTube"></a>
+      <a href="https://twitter.com" aria-label="Twitter/X"><img src="images/x.svg" alt="Twitter"></a>
+      <a href="https://linkedin.com" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+    </div>
+
+    <div class="footer-meta">
+      <p>WDD 231 | Kezia Aparri</p>
+      <p>&copy; <span id="year"></span> Davao Chamber of Commerce</p>
+      <p>Last Modification: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+</body>
+</html>

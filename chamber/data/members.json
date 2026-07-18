@@ -1,0 +1,74 @@
+{
+  "members": [
+    {
+      "name": "Eden Highlands Resort",
+      "address": "Eden Road, Barangay Toril, Davao City, 8000",
+      "phone": "(082) 234-5566",
+      "url": "https://www.edenresortdavao.com",
+      "image": "eden-resort.jpg",
+      "membershipLevel": 3,
+      "tagline": "Mountain-view resort and events venue overlooking Davao Gulf",
+      "category": "Tourism - Resort"
+    },
+    {
+      "name": "Malagos Garden Resort",
+      "address": "Malagos, Baguio District, Davao City, 8000",
+      "phone": "(082) 300-1123",
+      "url": "https://www.malagos.com",
+      "image": "malagos-resort.jpg",
+      "membershipLevel": 3,
+      "tagline": "Eco-tourism park, chocolate museum, and butterfly sanctuary",
+      "category": "Tourism - Agri-Park"
+    },
+    {
+      "name": "Davao Crocodile Park & Tribu K'Mindanawan",
+      "address": "Riverfront Corporate City, Diversion Road, Davao City, 8000",
+      "phone": "(082) 286-1054",
+      "url": "https://www.crocodileparkdavao.com",
+      "image": "crocodile-park.jpg",
+      "membershipLevel": 2,
+      "tagline": "Wildlife park and cultural village showcasing Mindanao heritage",
+      "category": "Tourism - Wildlife Park"
+    },
+    {
+      "name": "Kadayawan Durian Farm",
+      "address": "Km 18, Calinan District, Davao City, 8000",
+      "phone": "(082) 293-7741",
+      "url": "https://www.kadayawandurian.ph",
+      "image": "kadayawan-durian.jpg",
+      "membershipLevel": 1,
+      "tagline": "Family-run durian orchard offering farm tours and tastings",
+      "category": "Agriculture - Farm"
+    },
+    {
+      "name": "Cacao De Davao Exports",
+      "address": "Km 11, Tugbok District, Davao City, 8000",
+      "phone": "(082) 244-8890",
+      "url": "https://www.cacaodedavao.com",
+      "image": "cacao-de-davao.jpg",
+      "membershipLevel": 3,
+      "tagline": "Cacao processing and export company supplying international buyers",
+      "category": "Agriculture - Export"
+    },
+    {
+      "name": "Samal Island Boat Tours",
+      "address": "Sta. Ana Wharf, Davao City, 8000",
+      "phone": "(082) 227-3312",
+      "url": "https://www.samalislandtours.ph",
+      "image": "samal-tours.webp",
+      "membershipLevel": 2,
+      "tagline": "Island-hopping and snorkeling tours around IGACOS and Samal",
+      "category": "Tourism - Tour Operator"
+    },
+    {
+      "name": "Apo Coffee Growers Cooperative",
+      "address": "Sitio Baruring, Brgy. Colonsabak, Davao City, 8000",
+      "phone": "(082) 271-5502",
+      "url": "https://www.apocoffeegrowers.ph",
+      "image": "apo-growers.jpg",
+      "membershipLevel": 1,
+      "tagline": "Cooperative of Mt. Apo-based Arabica coffee farmers",
+      "category": "Agriculture - Cooperative"
+    }
+  ]
+}
