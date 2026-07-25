@@ -68,6 +68,18 @@ button:focus-visible {
   white-space: nowrap;
 }
 
+/* ---------- Reusable hover-lift pattern ----------
+   Consolidates the repeated hover box-shadow/transform
+   used by .member-card, .event-card, .spotlight-card */
+.hover-lift {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.hover-lift:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
 /* ---------- Header (shared across all pages) ---------- */
 .site-header {
   display: flex;
@@ -209,12 +221,6 @@ button:focus-visible {
   border-radius: var(--radius-lg);
   background-color: var(--color-card-bg);
   box-shadow: var(--shadow-card);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.member-card:hover {
-  box-shadow: var(--shadow-card-hover);
-  transform: translateY(-2px);
 }
 
 .list-view .member-card {
@@ -311,6 +317,9 @@ button:focus-visible {
   min-height: 340px;
   color: #fff;
   overflow: hidden;
+  /* Fallback so white text always has guaranteed contrast,
+     even before the image loads or if it fails to load */
+  background-color: var(--color-primary-dark);
 }
 
 .hero img {
@@ -326,7 +335,9 @@ button:focus-visible {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(20, 40, 20, 0.15) 0%, rgba(20, 30, 20, 0.85) 100%);
+  /* Darkened gradient to guarantee WCAG AA contrast for white text
+     regardless of how light the underlying photo is */
+  background: linear-gradient(180deg, rgba(20, 40, 20, 0.35) 0%, rgba(20, 30, 20, 0.9) 100%);
   z-index: 1;
 }
 
@@ -392,12 +403,6 @@ button:focus-visible {
   background-color: var(--color-card-bg);
   box-shadow: var(--shadow-card);
   border-left: 4px solid var(--color-accent);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.event-card:hover {
-  box-shadow: var(--shadow-card-hover);
-  transform: translateY(-2px);
 }
 
 .event-card img {
@@ -520,12 +525,6 @@ button:focus-visible {
   border-radius: var(--radius-lg);
   background-color: var(--color-card-bg);
   box-shadow: var(--shadow-card);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.spotlight-card:hover {
-  box-shadow: var(--shadow-card-hover);
-  transform: translateY(-2px);
 }
 
 .spotlight-card img {
