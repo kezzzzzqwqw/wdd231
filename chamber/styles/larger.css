@@ -88,6 +88,60 @@
   .footer-social {
     justify-content: center;
   }
+
+  /* ---------- Home page: tablet and up ---------- */
+
+  .home-main {
+    gap: 3rem;
+  }
+
+  .hero {
+    min-height: 460px;
+  }
+
+  .hero-content {
+    padding: 2.5rem 2rem 3rem;
+    max-width: 720px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    max-width: 48ch;
+    font-size: 1.05rem;
+  }
+
+  .home-section {
+    padding: 0 2rem;
+  }
+
+  .home-section h2 {
+    font-size: 1.6rem;
+  }
+
+  /* Current events + weather sit side by side on wider screens */
+  .events-weather-wrap {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .events-weather-wrap .home-section {
+    padding: 0;
+  }
+
+  .events-list {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+  }
+
+  .spotlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -97,6 +151,14 @@
   }
 
   .directory.list-view {
+    grid-template-columns: 1fr;
+  }
+
+  .spotlights-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .events-list {
     grid-template-columns: 1fr;
   }
 }
