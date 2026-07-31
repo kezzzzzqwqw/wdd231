@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | Davao Chamber of Commerce</title>
+  <meta name="description" content="Confirmation page for Davao Chamber of Commerce membership applications.">
+  <meta name="author" content="Kezia Aparri">
+  <meta name="robots" content="noindex">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <script src="scripts/join.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/logo.png" alt="Davao Chamber of Commerce logo" class="logo">
+      <span class="brand-name">Davao Chamber<br>of Commerce</span>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" class="current" aria-current="page">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="thankyou-main">
+
+    <section class="thankyou-intro">
+      <h1>Thank You!</h1>
+      <p>We appreciate your interest in joining the Davao Chamber of Commerce. Your application has been received, and a member of our team will follow up with you shortly.</p>
+    </section>
+
+    <section class="thankyou-summary" aria-labelledby="summaryHeading">
+      <h2 id="summaryHeading">Application Summary</h2>
+      <dl class="summary-list">
+        <div class="summary-row">
+          <dt>First Name</dt>
+          <dd id="outFirstName"></dd>
+        </div>
+        <div class="summary-row">
+          <dt>Last Name</dt>
+          <dd id="outLastName"></dd>
+        </div>
+        <div class="summary-row">
+          <dt>Email Address</dt>
+          <dd id="outEmail"></dd>
+        </div>
+        <div class="summary-row">
+          <dt>Mobile Phone Number</dt>
+          <dd id="outMobilePhone"></dd>
+        </div>
+        <div class="summary-row">
+          <dt>Business/Organization Name</dt>
+          <dd id="outOrgName"></dd>
+        </div>
+        <div class="summary-row">
+          <dt>Submitted On</dt>
+          <dd id="outTimestamp"></dd>
+        </div>
+      </dl>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-contact">
+      <p><strong>Davao Chamber of Commerce</strong></p>
+      <p>Davao City, Davao del Sur, Philippines 8000</p>
+      <p>info@davaochamber.ph</p>
+      <p>(082) 222-1000</p>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://youtube.com" aria-label="YouTube"><img src="images/youtube.svg" alt="YouTube"></a>
+      <a href="https://twitter.com" aria-label="Twitter/X"><img src="images/twitter.svg" alt="Twitter"></a>
+      <a href="https://linkedin.com" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+    </div>
+
+    <div class="footer-meta">
+      <p>WDD 231 | Kezia Aparri</p>
+      <p>&copy; <span id="year"></span> Davao Chamber of Commerce</p>
+      <p>Last Modification: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+</body>
+</html>

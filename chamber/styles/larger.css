@@ -142,6 +142,31 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
+
+  /* ---------- Join / Thank You pages: tablet and up ---------- */
+
+  .join-intro,
+  .thankyou-intro {
+    padding: 2.5rem 2rem 0.5rem;
+  }
+
+  .join-layout {
+    flex-direction: row;
+    padding: 0.5rem 2rem 3rem;
+  }
+
+  .join-form-section {
+    flex: 1 1 60%;
+  }
+
+  .membership-levels {
+    flex: 1 1 34%;
+  }
+
+  .thankyou-summary {
+    margin: 0.5rem 2rem 3rem;
+    max-width: 560px;
+  }
 }
 
 @media screen and (min-width: 1024px) {

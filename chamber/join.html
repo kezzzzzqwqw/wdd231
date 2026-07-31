@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join | Davao Chamber of Commerce</title>
+  <meta name="description" content="Apply for membership with the Davao Chamber of Commerce and choose the level that fits your organization.">
+  <meta name="author" content="Kezia Aparri">
+
+  <meta property="og:title" content="Join | Davao Chamber of Commerce">
+  <meta property="og:description" content="Apply for membership with the Davao Chamber of Commerce and choose the level that fits your organization.">
+  <meta property="og:image" content="https://kezzzzzqwqw.github.io/wdd231/chamber/images/davao-tourism.jpg">
+  <meta property="og:url" content="https://kezzzzzqwqw.github.io/wdd231/chamber/join.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <script src="scripts/join.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/logo.png" alt="Davao Chamber of Commerce logo" class="logo">
+      <span class="brand-name">Davao Chamber<br>of Commerce</span>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" class="current" aria-current="page">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="join-main">
+
+    <section class="join-intro">
+      <h1>Join the Chamber</h1>
+      <p>Become a member of the Davao Chamber of Commerce and connect with tourism and agriculture businesses across the region. Complete the form below to start your application.</p>
+    </section>
+
+    <div class="join-layout">
+
+      <section class="join-form-section" aria-labelledby="formHeading">
+        <h2 id="formHeading" class="visually-hidden">Membership application form</h2>
+
+        <form action="thank-you.html" method="get" class="join-form">
+
+          <label for="firstName">
+            First Name
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              title="Your first name"
+              autocomplete="given-name"
+              required>
+          </label>
+
+          <label for="lastName">
+            Last Name
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              title="Your last name"
+              autocomplete="family-name"
+              required>
+          </label>
+
+          <label for="orgTitle">
+            Organizational Title
+            <input
+              type="text"
+              id="orgTitle"
+              name="orgTitle"
+              title="Your title within your organization (letters, hyphens, and spaces only, minimum 7 characters)"
+              autocomplete="organization-title"
+              pattern="[A-Za-z\- ]{7,}">
+          </label>
+
+          <label for="email">
+            Email Address
+            <input
+              type="email"
+              id="email"
+              name="email"
+              title="Your email address"
+              autocomplete="email"
+              placeholder="yourname@example.com"
+              required>
+          </label>
+
+          <label for="mobilePhone">
+            Mobile Phone Number
+            <input
+              type="tel"
+              id="mobilePhone"
+              name="mobilePhone"
+              title="Your mobile phone number"
+              autocomplete="tel"
+              required>
+          </label>
+
+          <label for="orgName">
+            Business/Organization Name
+            <input
+              type="text"
+              id="orgName"
+              name="orgName"
+              title="The name of your business or organization"
+              autocomplete="organization"
+              required>
+          </label>
+
+          <label for="membershipLevel">
+            Membership Level
+            <select id="membershipLevel" name="membershipLevel" title="Select a membership level">
+              <option value="np">NP Membership</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </label>
+
+          <label for="orgDescription">
+            Business/Organization Description
+            <textarea
+              id="orgDescription"
+              name="orgDescription"
+              title="A brief description of your business or organization"
+              rows="4"></textarea>
+          </label>
+
+          <input type="hidden" id="timestamp" name="timestamp">
+
+          <input type="submit" value="Submit Application" class="cta-button submit-btn">
+
+        </form>
+      </section>
+
+      <aside class="membership-levels" aria-label="Membership level details">
+
+        <div class="level-card">
+          <h3>NP Membership</h3>
+          <p class="level-price">No Fee</p>
+          <p>For registered non-profit organizations.</p>
+          <button type="button" class="level-link" data-modal="npModal">Learn more</button>
+        </div>
+
+        <div class="level-card">
+          <h3>Bronze Membership</h3>
+          <p class="level-price">₱1,500 / year</p>
+          <p>Entry-level membership for small businesses.</p>
+          <button type="button" class="level-link" data-modal="bronzeModal">Learn more</button>
+        </div>
+
+        <div class="level-card">
+          <h3>Silver Membership</h3>
+          <p class="level-price">₱4,000 / year</p>
+          <p>Expanded visibility and event benefits.</p>
+          <button type="button" class="level-link" data-modal="silverModal">Learn more</button>
+        </div>
+
+        <div class="level-card">
+          <h3>Gold Membership</h3>
+          <p class="level-price">₱8,500 / year</p>
+          <p>Our top tier with full chamber benefits.</p>
+          <button type="button" class="level-link" data-modal="goldModal">Learn more</button>
+        </div>
+
+      </aside>
+
+    </div>
+
+    <!-- Membership benefit modals -->
+
+    <dialog id="npModal" class="membership-modal">
+      <h3>NP Membership Benefits</h3>
+      <ul>
+        <li>Free listing in the business directory</li>
+        <li>Access to monthly networking events</li>
+        <li>Newsletter subscription</li>
+        <li>Voting rights at chamber meetings</li>
+      </ul>
+      <button type="button" class="modal-close" data-close>Close</button>
+    </dialog>
+
+    <dialog id="bronzeModal" class="membership-modal">
+      <h3>Bronze Membership Benefits</h3>
+      <ul>
+        <li>Everything in NP Membership</li>
+        <li>Discounted rates on chamber-hosted events</li>
+        <li>Basic directory listing with logo</li>
+        <li>Access to member-only training workshops</li>
+      </ul>
+      <button type="button" class="modal-close" data-close>Close</button>
+    </dialog>
+
+    <dialog id="silverModal" class="membership-modal">
+      <h3>Silver Membership Benefits</h3>
+      <ul>
+        <li>Everything in Bronze Membership</li>
+        <li>Featured directory listing placement</li>
+        <li>Two complimentary event tickets per year</li>
+        <li>Quarterly spotlight consideration on the homepage</li>
+      </ul>
+      <button type="button" class="modal-close" data-close>Close</button>
+    </dialog>
+
+    <dialog id="goldModal" class="membership-modal">
+      <h3>Gold Membership Benefits</h3>
+      <ul>
+        <li>Everything in Silver Membership</li>
+        <li>Guaranteed homepage spotlight placement</li>
+        <li>Unlimited event tickets</li>
+        <li>Priority advertising in the chamber newsletter</li>
+        <li>Dedicated account contact at the chamber office</li>
+      </ul>
+      <button type="button" class="modal-close" data-close>Close</button>
+    </dialog>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-contact">
+      <p><strong>Davao Chamber of Commerce</strong></p>
+      <p>Davao City, Davao del Sur, Philippines 8000</p>
+      <p>info@davaochamber.ph</p>
+      <p>(082) 222-1000</p>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://youtube.com" aria-label="YouTube"><img src="images/youtube.svg" alt="YouTube"></a>
+      <a href="https://twitter.com" aria-label="Twitter/X"><img src="images/twitter.svg" alt="Twitter"></a>
+      <a href="https://linkedin.com" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+    </div>
+
+    <div class="footer-meta">
+      <p>WDD 231 | Kezia Aparri</p>
+      <p>&copy; <span id="year"></span> Davao Chamber of Commerce</p>
+      <p>Last Modification: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+</body>
+</html>
