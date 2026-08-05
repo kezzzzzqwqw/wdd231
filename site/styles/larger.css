@@ -1,0 +1,31 @@
+/* =========================================
+   Fretwork — larger.css
+   Loaded only at viewports >= 640px via a
+   media-scoped <link> in site-plan.html.
+   ========================================= */
+
+.site-header {
+  padding: 5rem 2rem 4rem;
+}
+
+main {
+  padding: 0 2rem 5rem;
+}
+
+section {
+  margin-top: 4.5rem;
+}
+
+.panel,
+.type-sample {
+  padding: 2rem 2.25rem;
+}
+
+.swatch-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.wireframe-grid {
+  grid-template-columns: 1fr 2fr;
+  align-items: start;
+}

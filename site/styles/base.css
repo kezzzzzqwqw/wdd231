@@ -1,0 +1,305 @@
+/* =========================================
+   Fretwork — styles.css
+   Mobile-first base styles (320px and up)
+   ========================================= */
+
+/* ---------- Design tokens ---------- */
+:root {
+  --color-paper: #ecdfb4;
+  --color-paper-panel: #f5edd2;
+  --color-ink: #241c15;
+  --color-ink-soft: #4a4032;
+  --color-sunburst: #b85c1f;
+  --color-rosewood: #6b1e23;
+  --color-brass: #9c7a1f;
+  --color-line: #c9b98a;
+
+  --font-heading: "Fraunces", Georgia, serif;
+  --font-body: "Source Sans 3", -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+
+  --radius-sm: 3px;
+  --radius-md: 4px;
+
+  --container-width: 880px;
+  --container-padding: 1.5rem;
+}
+
+/* ---------- Reset ---------- */
+* { box-sizing: border-box; }
+
+ul { list-style: none; margin: 0; padding: 0; }
+
+a { text-decoration: none; color: inherit; }
+
+/* ---------- Base ---------- */
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-ink);
+  line-height: 1.15;
+  margin: 0;
+}
+
+a {
+  color: var(--color-sunburst);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-sunburst);
+  outline-offset: 2px;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-brass);
+}
+
+/* ---------- Header (shared) ---------- */
+.site-header {
+  padding: 3.5rem 1.5rem 3rem;
+  text-align: center;
+  border-bottom: 3px solid var(--color-rosewood);
+  position: relative;
+}
+
+.site-header::after {
+  /* three "string" hairlines beneath the rosewood border */
+  content: "";
+  display: block;
+  width: min(520px, 80%);
+  height: 6px;
+  margin: 0.6rem auto 0;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      var(--color-line) 0px, var(--color-line) 1px,
+      transparent 1px, transparent 3px
+    );
+}
+
+.site-header h1 {
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  letter-spacing: -0.01em;
+}
+
+.site-header p {
+  margin-top: 0.75rem;
+  color: var(--color-ink-soft);
+  font-size: 1.05rem;
+}
+
+/* ---------- Main layout ---------- */
+main {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding) 4rem;
+}
+
+section {
+  margin-top: 3.5rem;
+}
+
+section > .label {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+section h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--color-rosewood);
+}
+
+section p {
+  color: var(--color-ink-soft);
+  max-width: 68ch;
+}
+
+/* ---------- Reusable panel pattern ----------
+   Consolidates the shared card look used by
+   .panel, .type-sample, and .scenario-list li */
+.panel,
+.type-sample {
+  background: var(--color-paper-panel);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.75rem;
+}
+
+.panel {
+  border-left: 5px solid var(--color-sunburst);
+}
+
+.panel .reason {
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+  border-top: 1px dashed var(--color-line);
+  font-size: 0.95rem;
+}
+
+/* ---------- Scenarios ---------- */
+.scenario-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.scenario-list li {
+  background: var(--color-paper-panel);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  position: relative;
+  padding-left: 2.6rem;
+  color: var(--color-ink);
+}
+
+.scenario-list li::before {
+  /* fret-marker dot, echoing inlay position markers */
+  content: "";
+  position: absolute;
+  left: 1.1rem;
+  top: 1.25rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-rosewood);
+}
+
+.scenario-list li q {
+  font-style: italic;
+}
+
+/* ---------- Color scheme swatches ---------- */
+.swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.1rem;
+  margin-top: 1.25rem;
+}
+
+.swatch {
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-paper-panel);
+}
+
+.swatch-color {
+  height: 74px;
+}
+
+.swatch-info {
+  padding: 0.75rem 0.9rem;
+}
+
+.swatch-info strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+}
+
+.swatch-info span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-ink-soft);
+  margin-top: 0.15rem;
+}
+
+.swatch-info small {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--color-ink-soft);
+  font-size: 0.85rem;
+}
+
+/* ---------- Typography samples ---------- */
+.type-samples {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.type-sample .label {
+  margin-bottom: 0.5rem;
+}
+
+.type-sample .sample-display {
+  font-family: var(--font-heading);
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+.type-sample .sample-body {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--color-ink-soft);
+  margin-top: 0.35rem;
+}
+
+.type-sample .sample-mono {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--color-rosewood);
+  margin-top: 0.35rem;
+}
+
+/* ---------- Wireframe ---------- */
+.wireframe-note {
+  color: var(--color-ink-soft);
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+
+.wireframe-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.wireframe-box {
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  padding: 0.5rem;
+}
+
+.wireframe-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.wireframe-box.mobile {
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.wireframe-box.desktop {
+  width: 100%;
+}
+
+/* ---------- Footer (shared) ---------- */
+footer {
+  text-align: center;
+  padding: 2rem 1.5rem 3rem;
+  border-top: 3px solid var(--color-rosewood);
+  color: var(--color-ink-soft);
+  font-size: 0.9rem;
+}
