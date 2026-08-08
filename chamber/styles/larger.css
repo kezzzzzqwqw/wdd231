@@ -193,8 +193,93 @@
   .directory {
     grid-template-columns: repeat(4, 1fr);
   }
+}
 
-  .directory.list-view {
-    grid-template-columns: 1fr;
+/* =========================================
+   Discover page — grid area assignments
+   (base rule, applies at all screen sizes
+   once cards exist in the DOM)
+   ========================================= */
+.discover-card:nth-child(1) { grid-area: area-1; }
+.discover-card:nth-child(2) { grid-area: area-2; }
+.discover-card:nth-child(3) { grid-area: area-3; }
+.discover-card:nth-child(4) { grid-area: area-4; }
+.discover-card:nth-child(5) { grid-area: area-5; }
+.discover-card:nth-child(6) { grid-area: area-6; }
+.discover-card:nth-child(7) { grid-area: area-7; }
+.discover-card:nth-child(8) { grid-area: area-8; }
+
+/* =========================================
+   Discover page — medium screens (641px–1024px)
+   Two-column layout with a full-width featured item
+   ========================================= */
+@media screen and (min-width: 641px) {
+
+  .discover-intro {
+    padding-top: 2.25rem;
+  }
+
+  .discover-intro p {
+    font-size: 0.95rem;
+  }
+
+  .discover-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    grid-template-areas:
+      "area-1 area-1"
+      "area-2 area-3"
+      "area-4 area-5"
+      "area-6 area-7"
+      "area-8 area-8";
+  }
+
+  .discover-card figure img {
+    height: 190px;
+    transition: transform 0.35s ease;
+  }
+
+  /* Image hover effect — enabled from medium screens up, not on mobile */
+  .discover-card:hover figure img {
+    transform: scale(1.045);
+  }
+}
+
+/* =========================================
+   Discover page — large screens (1025px and up)
+   Four-column layout with a large featured item
+   ========================================= */
+@media screen and (min-width: 1025px) {
+
+  .discover-intro {
+    padding-top: 2.75rem;
+  }
+
+  .discover-cards {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.75rem;
+    grid-template-areas:
+      "area-1 area-1 area-2 area-3"
+      "area-1 area-1 area-4 area-5"
+      "area-6 area-7 area-8 area-8";
+  }
+
+  .discover-card figure img {
+    height: 220px;
+  }
+
+  /* Featured card (always the first card rendered — area-1) fills its larger
+     2x2 footprint instead of leaving empty space below a fixed-height image */
+  .discover-cards > .discover-card:first-child {
+    height: 100%;
+  }
+
+  .discover-cards > .discover-card:first-child figure {
+    flex: 1;
+  }
+
+  .discover-cards > .discover-card:first-child figure img {
+    height: 100%;
+    min-height: 300px;
   }
 }
