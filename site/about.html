@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Your Name">
+  <meta name="description" content="About Fretwork — a personal practice hub and beginner guitar resource guide, built from first-hand learning experience.">
+  <title>About — Fretwork</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About — Fretwork">
+  <meta property="og:description" content="Why Fretwork exists and who it's built for.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://example.com/about.html">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 640px)">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-row">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <a href="index.html" class="wordmark">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="11" fill="none" stroke="#6b1e23" stroke-width="1.5"/>
+          <circle cx="12" cy="12" r="2.4" fill="#b85c1f"/>
+        </svg>
+        Fretwork
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="practice.html">Practice</a></li>
+          <li><a href="gear.html">Gear</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section id="about-intro">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">About Fretwork</span>
+          <h2>Built while learning, not after</h2>
+          <p>Fretwork started as a personal practice log and grew into a small resource guide for other beginners working through the same early stumbling blocks.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-story">
+      <div class="wrap">
+        <div class="feature">
+          <div class="feature-art" aria-hidden="true">
+            <div class="feature-art">
+              <img
+                src="images/guitar-playing.jpg"
+                alt="Man playing an electric guitar"
+                loading="lazy"
+              >
+            </div>
+          </div>
+
+          <div class="feature-copy">
+            <span class="label">Why This Exists</span>
+            <h2>Every chord chart here was learned the slow way.</h2>
+            <p>There's no shortage of guitar tutorials online, but most assume a level of comfort a total beginner doesn't have yet. Fretwork is written from the other side of that gap — the chords, order, and pacing that actually made sense while starting from zero, without any prior music background.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-sections">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">Around the Site</span>
+          <h2>What you'll find here</h2>
+        </div>
+
+        <div class="card-grid">
+
+          <article class="card">
+            <div class="card-body">
+              <span class="label">Practice</span>
+              <h3>Chords, Strumming &amp; Songs</h3>
+              <p>A browsable library organized the way it was actually learned, from first open chords to first full songs.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <span class="label">Gear</span>
+              <h3>Honest Recommendations</h3>
+              <p>Guitar, tuner, and accessory picks based on what held up, plus tips for a practice routine that lasts.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <span class="label">Contact</span>
+              <h3>Questions &amp; Feedback</h3>
+              <p>A place to reach out with questions, corrections, or requests for chords and songs to add next.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-row">
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">|</span>
+        <a href="practice.html">Practice</a>
+        <span aria-hidden="true">|</span>
+        <a href="gear.html">Gear</a>
+        <span aria-hidden="true">|</span>
+        <a href="about.html">About</a>
+        <span aria-hidden="true">|</span>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <p class="footer-note">&copy; 2026 Fretwork. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

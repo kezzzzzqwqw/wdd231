@@ -1,31 +1,50 @@
 /* =========================================
    Fretwork — larger.css
    Loaded only at viewports >= 640px via a
-   media-scoped <link> in site-plan.html.
+   media-scoped <link> in index.html.
    ========================================= */
 
-.site-header {
-  padding: 5rem 2rem 4rem;
+.header-row { padding: 1.1rem 2rem; }
+
+.hamburger, .nav-toggle { display: none; }
+
+.primary-nav {
+  position: static;
+  max-height: none;
+  overflow: visible;
+  background: transparent;
+  border-bottom: 0;
 }
 
-main {
-  padding: 0 2rem 5rem;
+.primary-nav ul {
+  flex-direction: row;
+  padding: 0;
+  gap: 1.75rem;
 }
 
-section {
-  margin-top: 4.5rem;
+.primary-nav a {
+  border-bottom: 0;
+  padding: 0.4rem 0.1rem;
+  border-bottom: 2px solid transparent;
 }
 
-.panel,
-.type-sample {
-  padding: 2rem 2.25rem;
+.primary-nav a:hover,
+.primary-nav a[aria-current="page"] {
+  border-bottom: 2px solid var(--color-sunburst);
 }
 
-.swatch-grid {
-  grid-template-columns: repeat(3, 1fr);
+.wrap { padding: 0 2rem; }
+
+section { padding: 5rem 0; }
+
+.hero {
+  grid-template-columns: 1fr 1fr;
+  padding-top: 3.5rem;
+  gap: 3rem;
 }
 
-.wireframe-grid {
-  grid-template-columns: 1fr 2fr;
-  align-items: start;
-}
+.card-grid { grid-template-columns: repeat(3, 1fr); }
+
+.feature { grid-template-columns: 1fr 1.4fr; padding: 2.75rem; }
+
+.footer-row { flex-direction: row; justify-content: space-between; text-align: left; }

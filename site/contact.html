@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Your Name">
+  <meta name="description" content="Get in touch with Fretwork — questions, corrections, or song and chord requests.">
+  <title>Contact — Fretwork</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact — Fretwork">
+  <meta property="og:description" content="Get in touch with questions, corrections, or requests.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://example.com/contact.html">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 640px)">
+  <link rel="stylesheet" href="styles/interactive.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-row">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <a href="index.html" class="wordmark">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="11" fill="none" stroke="#6b1e23" stroke-width="1.5"/>
+          <circle cx="12" cy="12" r="2.4" fill="#b85c1f"/>
+        </svg>
+        Fretwork
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="practice.html">Practice</a></li>
+          <li><a href="gear.html">Gear</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+
+      
+  </header>
+
+  <main id="main">
+
+    <section id="contact-intro">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">Contact</span>
+          <h2>Get in touch</h2>
+          <p>Questions, corrections, or a chord and song you'd like added — all of it is welcome.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-details">
+      <div class="wrap">
+        <div class="card-grid">
+
+          <article class="card">
+            <div class="card-body">
+              <span class="label">Email</span>
+              <h3>Send a Message</h3>
+              <p>The fastest way to reach out directly.</p>
+              <a class="btn btn-primary btn-small" href="mailto:fretwork@gmail.com">fretwork@gmail.com</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <span class="label">Social</span>
+              <h3>Follow Along</h3>
+              <p>Practice clips and short updates posted between site updates.</p>
+              <a class="btn btn-small" href="https://fretwork.com" target="_blank" rel="noopener">@fretwork</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <span class="label">Response Time</span>
+              <h3>What to Expect</h3>
+              <p>This is a one-person, part-time project, so replies usually land within a few days.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-form">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">Message Form</span>
+          <h2>Or write it here</h2>
+          <p>Fill this out and it'll come through the same way as an email.</p>
+        </div>
+
+        <form
+          class="card contact-form"
+          action="form-action.html"
+          method="get"
+          novalidate
+        >
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              required
+            >
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            >
+          </div>
+
+          <div class="form-row">
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic" required>
+              <option value="" selected disabled>Choose one…</option>
+              <option value="song-request">Song request</option>
+              <option value="chord-correction">Chord correction</option>
+              <option value="general-question">General question</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-row form-row-checkbox">
+            <input type="checkbox" id="updates" name="updates" value="yes">
+            <label for="updates">Let me know about future site updates</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-row">
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">|</span>
+        <a href="practice.html">Practice</a>
+        <span aria-hidden="true">|</span>
+        <a href="gear.html">Gear</a>
+        <span aria-hidden="true">|</span>
+        <a href="about.html">About</a>
+        <span aria-hidden="true">|</span>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-note">&copy; 2026 Fretwork. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

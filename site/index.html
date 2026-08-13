@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Your Name">
+  <meta name="description" content="Fretwork is a practice hub and beginner resource guide for learning guitar — chords, scales, songs, and gear guidance for new players.">
+  <title>Fretwork — Learn Guitar, One Chord at a Time</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fretwork — Learn Guitar, One Chord at a Time">
+  <meta property="og:description" content="A practice hub and beginner resource guide for learning guitar — chords, scales, songs, and gear guidance for new players.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://example.com/index.html">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 640px)">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-row">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <a href="index.html" class="wordmark">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="11" fill="none" stroke="#6b1e23" stroke-width="1.5"/>
+          <circle cx="12" cy="12" r="2.4" fill="#b85c1f"/>
+        </svg>
+        Fretwork
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="practice.html">Practice</a></li>
+          <li><a href="gear.html">Gear</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero-section">
+    <div class="wrap hero">
+        <div class="hero-art">
+        <img
+            src="images/chord.jpg"
+            alt="Chord played on a guitar fretboard"
+            loading="lazy"
+        >
+        </div>
+        <div class="hero-copy">
+        <span class="label">Fretwork</span>
+        <h1>Learn guitar, one deliberate chord at a time.</h1>
+        <p>A practice hub built from first-hand beginner experience — chords, strumming, and songs to work through, plus honest gear advice, no fluff.</p>
+        <a class="btn btn-primary" href="practice.html">Start Practicing</a>
+        </div>
+    </div>
+    </section>
+
+    <!-- PRACTICE LIBRARY PREVIEW -->
+    <section id="practice-preview">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">Practice Library</span>
+          <h2>Start here</h2>
+          <p>Three places most beginners begin — pick one and spend fifteen focused minutes with it.</p>
+        </div>
+        <div class="card-grid">
+
+          <article class="card">
+            <div class="card-art">
+              <svg viewBox="0 0 100 40" role="img" aria-label="Chord diagram icon">
+                <g stroke="#4a4032" stroke-width="1.5" fill="none">
+                  <line x1="20" y1="5" x2="20" y2="35"/>
+                  <line x1="40" y1="5" x2="40" y2="35"/>
+                  <line x1="60" y1="5" x2="60" y2="35"/>
+                  <line x1="80" y1="5" x2="80" y2="35"/>
+                  <line x1="20" y1="5" x2="80" y2="5" stroke-width="3"/>
+                  <line x1="20" y1="20" x2="80" y2="20"/>
+                  <line x1="20" y1="35" x2="80" y2="35"/>
+                </g>
+                <circle cx="40" cy="12" r="4" fill="#b85c1f"/>
+                <circle cx="60" cy="27" r="4" fill="#6b1e23"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <span class="label">Beginner · 15 min</span>
+              <h3>First Open Chords</h3>
+              <p>The five chord shapes that unlock the most songs, with finger placement and common mistakes to avoid.</p>
+              <a class="btn btn-small" href="practice.html">View</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-art">
+              <svg viewBox="0 0 100 40" role="img" aria-label="Strumming pattern icon">
+                <g stroke="#4a4032" stroke-width="2" fill="none" stroke-linecap="round">
+                  <path d="M20 30 L20 10 M15 15 L20 10 L25 15"/>
+                  <path d="M40 10 L40 30 M35 25 L40 30 L45 25"/>
+                  <path d="M60 30 L60 10 M55 15 L60 10 L65 15"/>
+                  <path d="M80 10 L80 30 M75 25 L80 30 L85 25"/>
+                </g>
+              </svg>
+            </div>
+            <div class="card-body">
+              <span class="label">Beginner · 20 min</span>
+              <h3>Steady Strumming</h3>
+              <p>Down-up patterns for keeping time, plus a simple way to practice changing chords without losing the beat.</p>
+              <a class="btn btn-small" href="practice.html">View</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-art">
+              <svg viewBox="0 0 100 40" role="img" aria-label="Song notation icon">
+                <g stroke="#4a4032" stroke-width="1.5" fill="none">
+                  <line x1="15" y1="10" x2="85" y2="10"/>
+                  <line x1="15" y1="18" x2="85" y2="18"/>
+                  <line x1="15" y1="26" x2="70" y2="26"/>
+                </g>
+                <circle cx="30" cy="30" r="5" fill="#b85c1f"/>
+                <line x1="35" y1="30" x2="35" y2="12" stroke="#b85c1f" stroke-width="2"/>
+                <circle cx="60" cy="24" r="5" fill="#6b1e23"/>
+                <line x1="65" y1="24" x2="65" y2="8" stroke="#6b1e23" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <span class="label">Beginner · 25 min</span>
+              <h3>Your First Song</h3>
+              <p>A three-chord song arranged for absolute beginners, broken into short sections you can loop and repeat.</p>
+              <a class="btn btn-small" href="practice.html">View</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GEAR / GETTING STARTED -->
+    <section id="gear-preview">
+    <div class="wrap">
+        <div class="feature">
+        <div class="feature-art">
+            <img
+            src="images/tuner.jpg"
+            alt="Clip-on guitar tuner and pick"
+            loading="lazy"
+            >
+        </div>
+        <div class="feature-copy">
+            <span class="label">Gear &amp; Getting Started</span>
+            <h2>Find the right gear and get started with confidence.</h2>
+            <p>Recommended beginner guitars, tuners, and accessories, plus tips on building a practice routine that actually sticks — drawn from real trial and error, not affiliate lists.</p>
+            <a class="btn btn-primary" href="gear.html">Learn More</a>
+        </div>
+        </div>
+    </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-row">
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">|</span>
+        <a href="practice.html">Practice</a>
+        <span aria-hidden="true">|</span>
+        <a href="gear.html">Gear</a>
+        <span aria-hidden="true">|</span>
+        <a href="about.html">About</a>
+        <span aria-hidden="true">|</span>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-note">&copy; 2026 Fretwork. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

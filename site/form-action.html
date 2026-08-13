@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Your Name">
+  <meta name="description" content="Thank you for contacting Fretwork.">
+  <title>Message Received — Fretwork</title>
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 640px)">
+  <link rel="stylesheet" href="styles/interactive.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-row">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <a href="index.html" class="wordmark">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="11" fill="none" stroke="#6b1e23" stroke-width="1.5"/>
+          <circle cx="12" cy="12" r="2.4" fill="#b85c1f"/>
+        </svg>
+        Fretwork
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="practice.html">Practice</a></li>
+          <li><a href="gear.html">Gear</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+
+  </header>
+
+  <main id="main">
+
+    <section id="form-received">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">Message Sent</span>
+          <h2>Thanks — that came through.</h2>
+          <p id="received-summary">Here's a copy of what was submitted.</p>
+        </div>
+
+        <div class="card" id="received-card">
+          <div class="card-body">
+            <p class="empty-state">Loading your message…</p>
+          </div>
+        </div>
+
+        <p class="form-return">
+          <a class="btn btn-primary btn-small" href="contact.html">Back to Contact</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-row">
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">|</span>
+        <a href="practice.html">Practice</a>
+        <span aria-hidden="true">|</span>
+        <a href="gear.html">Gear</a>
+        <span aria-hidden="true">|</span>
+        <a href="about.html">About</a>
+        <span aria-hidden="true">|</span>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-note">&copy; 2026 Fretwork. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/form-action.js" defer></script>
+
+</body>
+</html>

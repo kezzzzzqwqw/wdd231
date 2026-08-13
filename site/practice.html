@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Your Name">
+  <meta name="description" content="Browse Fretwork's practice library — beginner chords, strumming patterns, and songs to work through.">
+  <title>Practice — Fretwork</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Practice — Fretwork">
+  <meta property="og:description" content="Beginner chords, strumming patterns, and songs to practice.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://example.com/practice.html">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 640px)">
+  <link rel="stylesheet" href="styles/interactive.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-row">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <a href="index.html" class="wordmark">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="11" fill="none" stroke="#6b1e23" stroke-width="1.5"/>
+          <circle cx="12" cy="12" r="2.4" fill="#b85c1f"/>
+        </svg>
+        Fretwork
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="practice.html" aria-current="page">Practice</a></li>
+          <li><a href="gear.html">Gear</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section id="practice-intro">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">Practice Library</span>
+          <h2>Chords, strumming, and songs</h2>
+          <p>Everything here is broken into short, focused sessions. Pick one card, spend fifteen to twenty-five minutes with it, and move on when it feels steady — not perfect.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="chords">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">Chords · Beginner</span>
+          <h2>First Open Chords</h2>
+        </div>
+
+        <div class="card-grid">
+
+          <article class="card">
+            <!-- E Minor -->
+            <div class="card-art">
+              <img src="images/e-minor.svg" alt="E minor chord diagram" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="label">Em</span>
+              <h3>E Minor</h3>
+              <p>Two fingers, wide open sound. Usually the very first chord most players learn.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <!-- A Minor -->
+            <div class="card-art">
+              <img src="images/a-minor.svg" alt="A minor chord diagram" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="label">Am</span>
+              <h3>A Minor</h3>
+              <p>A natural next step from Em — same shape, shifted over one string.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <!-- C Major -->
+            <div class="card-art">
+              <img src="images/c-major.svg" alt="C major chord diagram" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="label">C</span>
+              <h3>C Major</h3>
+              <p>A three-finger stretch that shows up constantly once you start playing full songs.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <!-- G Major -->
+            <div class="card-art">
+              <img src="images/g-major.svg" alt="G Major chord diagram" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="label">G</span>
+              <h3>G Major</h3>
+              <p>A bright, full-sounding chord that pairs well with C and D in a huge number of songs.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <!-- D Major -->
+            <div class="card-art">
+              <img src="images/d-major.svg" alt="D Major chord diagram" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="label">D</span>
+              <h3>D Major</h3>
+              <p>A triangular finger shape near the top three strings — small movements, big payoff.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <!-- D Seventh -->
+            <div class="card-art">
+              <img src="images/d-7.svg" alt="D seven chord diagram" loading="lazy">
+            </div>
+            <div class="card-body">
+              <span class="label">D7</span>
+              <h3>D Seventh</h3>
+              <p>A one-finger tweak from D that adds tension — common in blues and folk progressions.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="strumming">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">Rhythm · Beginner</span>
+          <h2>Strumming Patterns</h2>
+        </div>
+
+        <div class="card-grid">
+
+          <article class="card">
+            <div class="card-art">
+              <svg viewBox="0 0 100 40" role="img" aria-label="Down strums icon">
+                <g stroke="#4a4032" stroke-width="2" fill="none" stroke-linecap="round">
+                  <path d="M25 10 L25 30 M20 25 L25 30 L30 25"/>
+                  <path d="M50 10 L50 30 M45 25 L50 30 L55 25"/>
+                  <path d="M75 10 L75 30 M70 25 L75 30 L80 25"/>
+                </g>
+              </svg>
+            </div>
+
+            <div class="card-body">
+              <span class="label">4/4 · Downstrokes</span>
+              <h3>Down, Down, Down, Down</h3>
+              <p>The simplest possible pattern — four even downstrokes per measure. Good for locking in timing.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-art">
+              <svg viewBox="0 0 100 40" role="img" aria-label="Down up strums icon">
+                <g stroke="#4a4032" stroke-width="2" fill="none" stroke-linecap="round">
+                  <path d="M20 30 L20 10 M15 15 L20 10 L25 15"/>
+                  <path d="M40 10 L40 30 M35 25 L40 30 L45 25"/>
+                  <path d="M60 30 L60 10 M55 15 L60 10 L65 15"/>
+                  <path d="M80 10 L80 30 M75 25 L80 30 L85 25"/>
+                </g>
+              </svg>
+            </div>
+
+            <div class="card-body">
+              <span class="label">4/4 · Down-Up</span>
+              <h3>Down, Down-Up, Up, Down-Up</h3>
+              <p>A classic folk-pop pattern that fits a large share of beginner songs once it feels natural.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="songs">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">Songs · Beginner to Advanced</span>
+          <h2>Songs to Practice</h2>
+          <p>Loaded from the song library — filter by difficulty, star your favorites, and log a song once you've practiced it today.</p>
+        </div>
+
+        <div class="filter-row">
+          <label for="difficulty-filter">Difficulty</label>
+          <select id="difficulty-filter" aria-label="Filter songs by difficulty">
+            <option value="all">All levels</option>
+          </select>
+        </div>
+
+        <div class="card-grid" id="song-grid" aria-live="polite">
+          <p class="empty-state">Loading songs…</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-row">
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">|</span>
+        <a href="practice.html">Practice</a>
+        <span aria-hidden="true">|</span>
+        <a href="gear.html">Gear</a>
+        <span aria-hidden="true">|</span>
+        <a href="about.html">About</a>
+        <span aria-hidden="true">|</span>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <p class="footer-note">&copy; 2026 Fretwork. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Song detail modal, shared by every song card -->
+  <div class="modal-backdrop" id="song-modal" hidden>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="song-modal-title">
+      <button type="button" class="modal-close" aria-label="Close dialog">&times;</button>
+      <h3 id="song-modal-title"></h3>
+      <div id="song-modal-body"></div>
+    </div>
+  </div>
+
+  <script type="module" src="scripts/main.js" defer></script>
+
+</body>
+</html>
